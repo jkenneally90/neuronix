@@ -1,26 +1,24 @@
 import React from 'react';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import HeroSection from './HeroSection';
-import ContentSection from './ContentSection';
-import Footer from './Footer';
+import Header from './components/Header';
+import HeroSection from './components/HeroSection';
+import FeaturesSection from './components/FeaturesSection';
+import ProductOverview from './components/ProductOverview';
+import PricingSection from './components/PricingSection';
+import ResourcesSection from './components/ResourcesSection';
+import ContactSection from './components/ContactSection';
 
-const App: React.FC = () => {
+const App = () => {
   return (
-    <div className="font-sans">
+    <div className="min-h-screen bg-gray-50">
       <Header />
-      <div className="flex">
-        <Sidebar />
-        <main className="flex-1">
-          <HeroSection />
-          <ContentSection title="Features" description="Explore the powerful features of our AI agents." />
-          <ContentSection title="Customer Testimonials" description="What our customers have to say about our AI agents." />
-          <ContentSection title="Pricing" description="Find out how our pricing models fit your needs." />
-        </main>
-      </div>
-      <Footer />
+      <HeroSection />
+      <FeaturesSection />
+      <ProductOverview />
+      <PricingSection />
+      <ResourcesSection />
+      <ContactSection />
     </div>
   );
-}
+};
 
 export default App;
