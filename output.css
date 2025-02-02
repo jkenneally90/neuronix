@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=YourFontFamily:wght@400;700&display=swap');
 
 @tailwind base;
@@ -83,3 +84,90 @@ body {
 @media (min-width: 1024px) {
   /* Styles for large screens and above */
 }
+=======
+@import url('https://fonts.googleapis.com/css2?family=YourFontFamily:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #3490dc;
+  --secondary-color: #ffed4a;
+  --accent-color: #e3342f;
+  --primary-font: 'YourFontFamily', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  background-color: #f8fafc;
+  line-height: 1.6;
+}
+
+/* Utility classes for animations */
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.hover\:shadow-lg:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\:text-accent:hover {
+  color: var(--accent-color);
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition hover:shadow-lg hover:scale-105;
+}
+
+.card-header {
+  @apply p-4 bg-primary text-white;
+}
+
+.card-body {
+  @apply p-4;
+}
+
+.card-footer {
+  @apply p-4 bg-gray-100;
+}
+
+/* Button styles */
+.btn {
+  @apply px-4 py-2 rounded-lg text-white transition hover:bg-secondary;
+}
+
+.btn-primary {
+  @apply bg-primary;
+}
+
+.btn-secondary {
+  @apply bg-secondary;
+}
+
+/* Responsive utilities */
+@media (min-width: 640px) {
+  /* Styles for small screens and above */
+}
+
+@media (min-width: 768px) {
+  /* Styles for medium screens and above */
+}
+
+@media (min-width: 1024px) {
+  /* Styles for large screens and above */
+}
+>>>>>>> 775ae29e00870c8e53cf513bd7720754fbf90db1
