@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-=======
-/* Import Tailwind CSS base, components, and utility classes */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
 
 /* Base layer: Global styles and element defaults */
 @layer base {
@@ -97,4 +91,3 @@ a {
 ::selection {
   @apply bg-primary-100 text-primary-900;
 }
->>>>>>> 08da6dc (Enhance Solutions page with interactive design, detailed solution previews, and improved user experience)
