@@ -6,8 +6,21 @@ import {
   FiCode, FiTool, FiSearch, FiType, 
   FiZap, FiClipboard, FiAlertTriangle, FiGlobe 
 } from 'react-icons/fi';
+import type { IconType } from 'react-icons/lib';
 
-const solutions = [
+// Define the type for a solution
+type Solution = {
+  name: string;
+  description: string;
+  icon: IconType;
+  detailIcon: IconType;
+  gradient: string;
+  iconColor: string;
+  link: string;
+  features: string[];
+};
+
+const solutions: Solution[] = [
   {
     name: 'Intelligent Code Completion',
     description: 'Advanced AI-driven autocomplete that provides context-aware suggestions across multiple programming languages, reducing boilerplate code and accelerating development.',
@@ -66,7 +79,15 @@ const solutions = [
   }
 ];
 
-const SolutionCard = ({ solution, index, inView, onHover }) => {
+// Define props type for SolutionCard
+type SolutionCardProps = {
+  solution: Solution;
+  index: number;
+  inView: boolean;
+  onHover: (solution: Solution) => void;
+};
+
+const SolutionCard: React.FC<SolutionCardProps> = ({ solution, index, inView, onHover }) => {
   const { ref, inView: cardInView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -130,8 +151,8 @@ const SolutionCard = ({ solution, index, inView, onHover }) => {
   );
 };
 
-const SolutionsPage = () => {
-  const [hoveredSolution, setHoveredSolution] = useState(null);
+const SolutionsPage: React.FC = () => {
+  const [hoveredSolution, setHoveredSolution] = useState<Solution | null>(null);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,

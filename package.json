@@ -10,23 +10,16 @@
     "test": "vitest"
   },
   "dependencies": {
-<<<<<<< HEAD
-=======
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
->>>>>>> 08da6dc (Enhance Solutions page with interactive design, detailed solution previews, and improved user experience)
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.4.0",
-<<<<<<< HEAD
-    "react-intersection-observer": "^9.5.3"
-=======
     "react-intersection-observer": "^9.5.3",
     "react-markdown": "^9.0.3",
-    "react-router-dom": "^7.1.5",
+    "react-router-dom": "^6.22.0",
     "vite-plugin-markdown": "^2.2.0"
->>>>>>> 08da6dc (Enhance Solutions page with interactive design, detailed solution previews, and improved user experience)
   },
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.25.9",

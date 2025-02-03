@@ -1,5 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import FeaturesSection from './components/FeaturesSection';
@@ -8,34 +8,12 @@ import PricingSection from './components/PricingSection';
 import ResourcesSection from './components/ResourcesSection';
 import ContactSection from './components/ContactSection';
 
-const App = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      <HeroSection />
-      <FeaturesSection />
-      <ProductOverview />
-      <PricingSection />
-      <ResourcesSection />
-      <ContactSection />
-    </div>
-=======
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
+// Import Solutions pages
 import SolutionsPage from './pages/SolutionsPage';
-
-// Import detailed solution pages
 import CodeCompletionPage from './pages/solutions/CodeCompletionPage';
 import CodeGenerationPage from './pages/solutions/CodeGenerationPage';
 import DebuggingAssistantPage from './pages/solutions/DebuggingAssistantPage';
 import NaturalLanguageCodePage from './pages/solutions/NaturalLanguageCodePage';
-
-import HeroSection from './components/HeroSection';
-import FeaturesSection from './components/FeaturesSection';
-import ProductOverview from './components/ProductOverview';
-import PricingSection from './components/PricingSection';
-import ResourcesSection from './components/ResourcesSection';
-import ContactSection from './components/ContactSection';
 
 const HomePage = () => (
   <div className="bg-neutral-50">
@@ -63,7 +41,6 @@ const App = () => {
         </Routes>
       </div>
     </Router>
->>>>>>> 08da6dc (Enhance Solutions page with interactive design, detailed solution previews, and improved user experience)
   );
 };
 
