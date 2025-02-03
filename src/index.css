@@ -1,3 +1,100 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+=======
+/* Import Tailwind CSS base, components, and utility classes */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Base layer: Global styles and element defaults */
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
+  }
+
+  body {
+    @apply text-neutral-800 bg-neutral-50 font-sans leading-normal tracking-normal;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-neutral-900 font-bold;
+  }
+}
+
+/* Components layer: Reusable component classes */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl 
+           font-semibold transition-all duration-300 
+           focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white 
+           hover:bg-primary-700 focus:ring-primary-500 
+           shadow-medium hover:shadow-large;
+  }
+
+  .btn-secondary {
+    @apply bg-neutral-100 text-neutral-700 
+           hover:bg-neutral-200 focus:ring-neutral-500 
+           shadow-soft;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-medium 
+           transition-all duration-300 
+           hover:shadow-large;
+  }
+}
+
+/* Utilities layer: Custom utility classes */
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-secondary-600 
+           bg-clip-text text-transparent;
+  }
+
+  .section-spacing {
+    @apply py-16 md:py-24;
+  }
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  @apply w-2 bg-neutral-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-300 rounded-full;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Additional global styles for enhanced typography and interaction */
+a {
+  @apply text-primary-600 hover:text-primary-700 
+         transition-colors duration-300;
+}
+
+::selection {
+  @apply bg-primary-100 text-primary-900;
+}
+>>>>>>> 08da6dc (Enhance Solutions page with interactive design, detailed solution previews, and improved user experience)
